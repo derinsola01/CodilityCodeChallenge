@@ -1,4 +1,4 @@
-package com.derintester.dailycodingproblems;
+package com.derinplayground.codilitycodingchallenge;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
