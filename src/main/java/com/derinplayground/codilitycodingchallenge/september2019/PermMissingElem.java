@@ -44,8 +44,10 @@ public class PermMissingElem {
 
 	public static void main(String[] args) {
 		int[] givenArray = {2,3,1,5};
-//		int[] givenArray = {102,103,101,105}; // This solution score 100% on codility but
+//		int[] givenArray = {102,103,101,105}; // This solution scored 100% on codility but
 //												fails for this input data array.
+//												I'm guessing they didn't test for this kind of
+//												data
 		
 		int missingNumber = findMissingNumber(givenArray);
 		logger.debug("missingNumber holds:\t" + missingNumber);
