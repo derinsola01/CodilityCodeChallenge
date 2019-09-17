@@ -72,17 +72,21 @@ public class TapeEquilibrium {
 		int arrLen = givenArray.length;
 		int firstElement = givenArray[0];
 		int arraySumLessOne = 0;
+		
 		for (int outerIndex = 1; outerIndex < arrLen; outerIndex++) {
 			arraySumLessOne += givenArray[outerIndex];
 		}
 		
 		int ElementSumDiff = Math.abs(arraySumLessOne - firstElement);
+		
 		for (int diffIndex = 1; diffIndex < arrLen - 1; diffIndex++) {
 			arraySumLessOne -= givenArray[diffIndex];
 			firstElement += givenArray[diffIndex];
-			ElementSumDiff = (ElementSumDiff > Math.abs(firstElement - arraySumLessOne))
-					? Math.abs(firstElement - arraySumLessOne) : ElementSumDiff;
+			int indexDiff = Math.abs(firstElement - arraySumLessOne);
+			ElementSumDiff = (ElementSumDiff > indexDiff)
+					? indexDiff : ElementSumDiff;
 		}
+		
 		return ElementSumDiff;
 	}
 
