@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 public class PassingCarsTest extends TestCase {
 	
-    public void testApp(){
+    public void testPassingCarsPairs(){
     	int[] array1 = {0, 1, 0, 1, 1, 0, 1, 1};
     	int[] array2 = {0, 1, 0, 1, 1};
         assertTrue( true );
