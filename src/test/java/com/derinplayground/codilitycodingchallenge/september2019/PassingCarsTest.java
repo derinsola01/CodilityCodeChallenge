@@ -10,7 +10,6 @@ public class PassingCarsTest extends TestCase {
     public void testPassingCarsPairs(){
     	int[] array1 = {0, 1, 0, 1, 1, 0, 1, 1};
     	int[] array2 = {0, 1, 0, 1, 1};
-        assertTrue( true );
         assertTrue(passingCars.passingCarsPairs(array1) == 11);
         assertTrue(passingCars.passingCarsPairs(array2) == 5);
     }
