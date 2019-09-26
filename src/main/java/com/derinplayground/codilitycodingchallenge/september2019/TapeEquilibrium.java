@@ -4,7 +4,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
- * @author derin
+ * @author Derin Gbadebo
  */
 
 public class TapeEquilibrium {
