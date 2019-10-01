@@ -14,8 +14,10 @@ public class CyclicRotation {
 	private static final Logger logger = LogManager.getLogger(CyclicRotation.class);
 
 	public static void main(String[] args) {
-		int[] givenArr = {3, 8, 9, 7, 6};
-		int numOfRotations = 3;
+//		int[] givenArr = {3, 8, 9, 7, 6};  
+		int[] givenArr = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}; 
+//		int[] givenArr = {1, 2, 3, 4, 5}; 
+		int numOfRotations = 10 - 3;
 		int[] finalArr = rotateTheArray(givenArr, numOfRotations);
 		logger.debug("finalArr holds:\t" + Arrays.toString(finalArr));
 	}

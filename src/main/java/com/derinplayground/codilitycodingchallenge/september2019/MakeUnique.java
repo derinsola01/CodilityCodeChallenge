@@ -15,9 +15,9 @@ public class MakeUnique {
 	private static final Logger logger = LogManager.getLogger(MakeUnique.class);
 
 	public static void main(String[] args) {
-//		String S = "aaaabbbb";
+		String S = "aaaabbbb";
 //		String S = "eeee";
-		String S = "ccaaffddecee";
+//		String S = "ccaaffddecee";
 //		String S = "example";
 		int minCharToBeDeleted = solution(S);
 		logger.debug("minCharToBeDeleted holds: " + minCharToBeDeleted);
@@ -71,12 +71,3 @@ public class MakeUnique {
 	}
 
 }
-
-
-
-//select distinct tg.name as name, count(tc.group_name) as all_test_cases, count(tc.status = 'OK') as passed_test_cases, tg.test_value*count(tc.group_name) as total_value
-//from test_groups tg
-//left outer join test_cases tc 
-//on tc.group_name = tg.name
-//group by tg.name, tg.test_value
-//order by total_value desc, name asc
