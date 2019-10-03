@@ -1,6 +1,7 @@
 package com.derinplayground.codilitycodingchallenge.october2019;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.LogManager;
@@ -23,7 +24,7 @@ public class CellStates {
 		
 		if (days > 0) {
 			for(int outerIndex = 0; outerIndex < days; outerIndex++) {
-				int[] tempArrHolder = createNewArray(states);
+				int[] tempArrHolder = Arrays.copyOf(states, states.length);
 				for(int innerIndex = 0; innerIndex < states.length; innerIndex++) {
 					if((innerIndex - 1) < 0) {
 						if ((states[innerIndex + 1] == 0)) {
@@ -59,14 +60,6 @@ public class CellStates {
 		}
 
 		return returnList;
-	}
-
-	private static int[] createNewArray(int[] states) {
-		int[] tempArrHolder = new int[states.length];
-		for(int i = 0; i < states.length; i++) {
-			tempArrHolder[i] = states[i];
-		}
-		return tempArrHolder;
 	}
 
 }
