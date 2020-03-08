@@ -29,8 +29,7 @@ public class MinimumTime {
 		int minTime = 0;
 		if (numOfSubFiles == 0) {
 			minTime = 0;
-		}
-		if(numOfSubFiles == 1) {
+		} else if(numOfSubFiles == 1) {
 			minTime += sumOfElements;
 		} else if (numOfSubFiles > 1) {
 			for(int index = 1; index < files.size(); index++) {

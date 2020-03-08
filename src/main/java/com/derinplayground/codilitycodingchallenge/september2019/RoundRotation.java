@@ -24,14 +24,14 @@ public class RoundRotation {
 	
 	public static void main(String[] args) {
 		String givenString = "abc";
-		String expectedString = "cab";
+		String expectedString = "abc";
 		int rotationResult = getRotationResult(givenString, expectedString);
 		logger.debug("rotationResult is: " + rotationResult);
 		
 	}
 
 	private static int getRotationResult(String givenString, String expectedString) {
-		int numOfRotations = 1;
+		int numOfRotations = 10;
 		char[] charArray = givenString.toCharArray();
 		int charArrayLoopLength = charArray.length;
 		if (charArrayLoopLength <= 1) {
@@ -42,10 +42,10 @@ public class RoundRotation {
 				int tempPos = ((index % charArrayLoopLength) + numOfRotations);
 				int position = (tempPos < charArrayLoopLength) ? tempPos : tempPos % charArrayLoopLength;
 				finalArr[position] = charArray[index];
-				
 			}
 			
 			String finalString = new String(finalArr);
+			logger.debug("finalString is: " + finalString);
 			int returnResult = (expectedString.equals(finalString)) ? 1 : -1;
 			
 			return returnResult;
